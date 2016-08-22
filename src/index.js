@@ -13,7 +13,7 @@ const PREFIX = chalk.yellow.bold(pkg.name);
  */
 function getMissingDeps() {
   const missing = [];
-  const npmList= spawnSync('npm', [ 'ls', '--depth=0', '--json', ]);
+  const npmList= spawnSync('npm', [ 'ls', '--depth=0', '--json', '--prod', '--dev' ]);
   const { dependencies } = JSON.parse(npmList.stdout.toString());
 
   for (let depName of Object.keys(dependencies)) {
