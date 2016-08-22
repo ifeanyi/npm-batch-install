@@ -23,6 +23,6 @@ You many then install the failed packages using one or more of the techniques be
 ## Usage
 `npm-batch-install [options]`
 
-| Option  |  Default | Description
-|-|-:|-|
+| Option | Default | Description
+|---|---:|---|
 |`-B --batch-size=<num>`|`4`|The batch size|
