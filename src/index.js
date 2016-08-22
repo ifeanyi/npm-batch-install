@@ -1,7 +1,7 @@
 'use strict';
 const pkg = require('../package.json');
 const chalk = require('chalk');
-const { spawnSync } = require('child_process');
+const spawnSync = require('cross-spawn').sync;
 const { help, config } = require('./usage');
 
 const argv = require('minimist')(process.argv.slice(2), config);
