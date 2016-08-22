@@ -1,0 +1,28 @@
+{
+  "name": "npm-leery-install",
+  "version": "1.0.0",
+  "problems": [
+    "missing: eslint@^3.0.0, required by npm-leery-install@1.0.0",
+    "missing: mocha@^3.0.0, required by npm-leery-install@1.0.0"
+  ],
+  "dependencies": {
+    "chai": {
+      "version": "3.5.0",
+      "from": "chai@latest",
+      "resolved": "https://registry.npmjs.org/chai/-/chai-3.5.0.tgz"
+    },
+    "npm": {
+      "version": "3.10.6",
+      "from": "npm@latest",
+      "resolved": "https://registry.npmjs.org/npm/-/npm-3.10.6.tgz"
+    },
+    "eslint": {
+      "required": "^3.0.0",
+      "missing": true
+    },
+    "mocha": {
+      "required": "^3.0.0",
+      "missing": true
+    }
+  }
+}
