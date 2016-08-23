@@ -5,7 +5,7 @@ const spawnSync = require('cross-spawn').sync;
 const { help, config } = require('./usage');
 
 const argv = require('minimist')(process.argv.slice(2), config);
-const PREFIX = chalk.yellow.bold(pkg.name);
+const PREFIX = chalk.bgBlue.bold(pkg.name);
 
 /**
  * getMissingDeps
@@ -52,7 +52,10 @@ function logError(...args) {
  * @return {[type]}           [description]
  */
 function logPackages(packages, icon = ''){
-  return packages.map(pkg => console.log('├──', icon, pkg));
+  const indent = '├──';
+  const args = icon ? [ indent, icon ] : [ indent ];
+
+  return packages.map(pkg => console.log(...args, pkg));
 }
 
 /**
@@ -81,7 +84,7 @@ const installed = [];
 const batchSize = argv.batchSize;
 
 if (missing.length) {
-  logInfo('Found', missing.length, 'packages to install');
+  logInfo(missing.length, 'packages to install');
   logPackages(missing);
 } else {
   logInfo('Nothing to do here.');
