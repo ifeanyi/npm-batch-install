@@ -16,6 +16,11 @@
   "bin": {
     "npm-batch-install": "bin/npm-batch-install.js"
   },
+  "repository": "ifeanyi/npm-batch-install",
+  "bugs": {
+    "url": "https://github.com/ifeanyi/npm-batch-install/issues"
+  },
+  "preferGlobal": true,
   "keywords": [
     "install",
     "retry",
